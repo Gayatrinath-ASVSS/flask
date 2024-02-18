@@ -26,5 +26,5 @@ def home():
         line ="You are Anemic ,please visit neareast doctor soon"
     return render_template('after-page.html', data=pred,gender=sex,val=line)
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)

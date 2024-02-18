@@ -84,7 +84,6 @@ def sharp():
     img = Image.open('static/images/eye.jpg') #C:\\Users\\PC\\Desktop\\anemia-detection-with-machine-learning-main\\
     sharpened_img = img.filter(ImageFilter.SHARPEN) 
     sharpened_img.save("static/images/sharp.jpg")
-    img.close()
     return
 def laplacian():
 
@@ -97,14 +96,13 @@ def laplacian():
     plt.subplot(1, 2, 1)
     plt.imshow(image, cmap='gray')
     plt.title('Original Image')
-    plt.close()
+
     plt.subplot(1, 2, 2)
     plt.imshow(laplacian_image, cmap='gray')
     plt.title('Laplacian Filter')
-    
+
         # Save the subplot
     plt.savefig('static/images/laplacian.jpg')
-    plt.close()
 
 
     # img = Image.open('static/eye.jpg')
@@ -149,7 +147,6 @@ def histo():
     plt.ylabel('Frequency')
     plt.savefig('static/images/histo.jpg')
     plt.show()
-    plt.close()
     return
 
 def contour():
@@ -163,7 +160,6 @@ def contour():
     plt.subplot(122), plt.imshow(edges, cmap='gray'), plt.title('Edge Detection')
     plt.savefig('static/images/contour.jpg')
     plt.show()
-    plt.close()
     return
 
 def cmv():
@@ -178,7 +174,6 @@ def cmv():
     plt.subplot(133), plt.imshow(image_rgb, cmap='jet'), plt.title('Jet Map')
     plt.savefig('static/images/cmv.jpg')
     plt.show()
-    plt.close()
     return
 
 def scatter():
@@ -194,7 +189,6 @@ def scatter():
     plt.savefig('static/images/scatter.jpg')
     # Display the plot
     plt.show()
-    plt.close()
 
 def line():
     img = mpimg.imread('static/images/eye.jpg')
@@ -209,7 +203,6 @@ def line():
     plt.savefig('static/images/line.jpg')
     # Display the plot
     plt.show()
-    plt.close()
 
 def bar():
     img = mpimg.imread('static/images/eye.jpg')
@@ -224,7 +217,6 @@ def bar():
     plt.savefig('static/images/bar.jpg')
     # Display the plot
     plt.show()
-    plt.close()
 
 
 
